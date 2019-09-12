@@ -3,6 +3,7 @@ clear all;close all;clc;
 load('iddata-08.mat');
 
 %% Input for grade m and orders na and nb
+
 m = input('Give m: ');
 na = input('Order na: ');
 nb = input('ORder nb: ');
@@ -10,12 +11,14 @@ nk = 1; % we consider the delay nk as 1
 n = na+nb; % no. of system's inputs
 
 %% Representation of identification data
+
 uid = id.u;
 yid = id.y;
 subplot(211);plot(uid);legend('U Id');title('Identification Data');
 subplot(212);plot(yid);legend('Y Id');
 
 %% Representation of Validation Data
+
 yval = val.y;
 uval = val.u;
 figure;
@@ -69,6 +72,7 @@ ysid=[zeros(n,1)];
 ysiv=[zeros(n,1)];
 
 %% Simulation on identification data
+
 ysid = Simulation(na,nb,nk,m,uid,ysid,theta);
 
 mses = ObtainMSE(ysid,yid');
@@ -80,7 +84,7 @@ legend('Y id','Y sim id');
 
 %% Simulation on validation data
 ysiv = Simulation(na,nb,nk,m,uval,ysiv,theta);
- 
+
 msesv = ObtainMSE(ysiv,yval');
 figure;
 plot(yval);hold on
