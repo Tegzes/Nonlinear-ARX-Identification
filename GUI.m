@@ -1,26 +1,26 @@
-function varargout = GUI_PROJ2(varargin)
-% GUI_PROJ2 MATLAB code for GUI_PROJ2.fig
-%      GUI_PROJ2, by itself, creates a new GUI_PROJ2 or raises the existing
+function varargout = GUI(varargin)
+% GUI MATLAB code for GUI.fig
+%      GUI, by itself, creates a new GUI or raises the existing
 %      singleton*.
 %
-%      H = GUI_PROJ2 returns the handle to a new GUI_PROJ2 or the handle to
+%      H = GUI returns the handle to a new GUI or the handle to
 %      the existing singleton*.
 %
-%      GUI_PROJ2('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in GUI_PROJ2.M with the given input arguments.
+%      GUI('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in GUI.M with the given input arguments.
 %
-%      GUI_PROJ2('Property','Value',...) creates a new GUI_PROJ2 or raises the
+%      GUI('Property','Value',...) creates a new GUI or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before GUI_PROJ2_OpeningFcn gets called.  An
+%      applied to the GUI before GUI_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to GUI_PROJ2_OpeningFcn via varargin.
+%      stop.  All inputs are passed to GUI_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help GUI_PROJ2
+% Edit the above text to modify the response to help GUI
 
 % Last Modified by GUIDE v2.5 02-Jan-2019 22:03:00
 
@@ -28,8 +28,8 @@ function varargout = GUI_PROJ2(varargin)
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @GUI_PROJ2_OpeningFcn, ...
-                   'gui_OutputFcn',  @GUI_PROJ2_OutputFcn, ...
+                   'gui_OpeningFcn', @GUI_OpeningFcn, ...
+                   'gui_OutputFcn',  @GUI_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -44,13 +44,13 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before GUI_PROJ2 is made visible.
-function GUI_PROJ2_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before GUI is made visible.
+function GUI_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to GUI_PROJ2 (see VARARGIN)
+% varargin   command line arguments to GUI (see VARARGIN)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
