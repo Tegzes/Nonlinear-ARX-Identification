@@ -2,9 +2,9 @@ function [ phi ] = ObtainPhi(y,u,na,nb,nk,m,n )
 
 % In this function we will find the matrix of phi regresors as following:
 % we generate elements of arx model y(k-i), u(k-i)
-% then we get the elements at exponentiation coresponding to grade m
+% then we get the elements at exponentiation coresponding to degree m
 % after this we generate the combinations y(k-i)^i*u(k-i)^j
-% with condition i+j<=m , finally we generate the matrix of regresors phi
+% with condition i+j<=m , finally we generate the matrix of regressors phi
 % which contains arx liniar elements y,u , at exponentiation m
 
 
@@ -27,7 +27,7 @@ for k=n+1:length(y)
           end
       end
     end
-    phi = [phi;Ly Lu L_yp L_up L_comb 1]; % adding to regresors matrix  
+    phi = [phi;Ly Lu L_yp L_up L_comb 1]; % adding to regressors matrix  
 end
 
 end
